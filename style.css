@@ -43,6 +43,9 @@
   margin-right: 7px;
   font-style: normal;
 }
+.text-bold {
+  font-weight: 600;
+}
 
 /* Styling Menu Kiri */
 .nav-links {
@@ -146,4 +149,16 @@
 
 .whay {
   margin: 10px;
+}
+
+/* bagian About*/
+/* garis tengah visi misi */
+.divider {
+  width: 1px;
+  background: #ddd;
+}
+
+.bullet-yellow li::marker {
+  color: #ffcc00;
+  font-size: 20px
 }
