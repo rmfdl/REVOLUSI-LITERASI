@@ -147,3 +147,7 @@
 .whay {
   margin: 10px;
 }
+
+.modal {
+  --bs-modal-width: 700px;
+}
