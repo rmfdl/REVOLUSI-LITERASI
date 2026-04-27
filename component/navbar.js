@@ -1,6 +1,6 @@
 let nav = `<nav class="navbar">
       <div class="navbar-left">
-        <a href="#" class="logo">
+        <a href="#" class="logo1">
           <span class="text-black">Revolusi</span
           ><span class="text-yellow">Literasi</span>
         </a>
