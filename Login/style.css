@@ -1,0 +1,53 @@
+/* .container {
+  max-width: 1000px;
+} */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.container {
+  flex: 1 0 auto;
+}
+
+.containerLogin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+
+.conRaight {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.conLeft {
+  display: flex;
+  flex-direction: column;
+  padding: 65px;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../asset/bacgroundyellow.jpg);
+  border-top-left-radius: 120px;
+  background-repeat: no-repeat;
+  width: 50%;
+  background-size: 100% 1000px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
