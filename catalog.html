@@ -6,6 +6,7 @@
     <title>Catalog Revolusi Literasi</title>
     <!-- Link CSS -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="footer/style.css" />
 
     <!-- Link Bostrap -->
     <link
@@ -16,15 +17,6 @@
     />
   </head>
   <body>
-    <!-- script -->
-    <script src="component/navbar.js"></script>
-    <script src="component/addOn.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-
     <!-- Start Catalog Produk Ebook-->
 
     <div class="text-center mb-5">
@@ -43,10 +35,17 @@
               alt="Foto Team"
             />
             <div class="">
-              <p class="card-title" style="color: #303020">Che Guevara</p>
+              <p class="card-title pt-2" style="color: #303020">Che Guevara</p>
               <p class="price card-text small text-secondary">Rp.100.000,00</p>
               <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
-              <button type="button" class="btn btn-warning">Pesan</button>
+              <button
+                type="button"
+                class="btn btn-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalPesan"
+              >
+                Pesan
+              </button>
             </div>
           </div>
         </div>
@@ -54,16 +53,23 @@
         <div class="col gap-5">
           <div class="card" style="width: 250px; height: 450px">
             <img
-              src="assets/cheGuevara.png"
+              src="assets/buyaHamka.png"
               class="card-img-top"
               style="height: 320px"
               alt="Foto Team"
             />
             <div class="">
-              <p class="card-title" style="color: #303020">Che Guevara</p>
+              <p class="card-title pt-2" style="color: #303020">Buya Hamka</p>
               <p class="price card-text small text-secondary">Rp.100.000,00</p>
               <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
-              <button type="button" class="btn btn-warning">Pesan</button>
+              <button
+                type="button"
+                class="btn btn-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalPesan"
+              >
+                Pesan
+              </button>
             </div>
           </div>
         </div>
@@ -71,16 +77,26 @@
         <div class="col gap-5">
           <div class="card" style="width: 250px; height: 450px">
             <img
-              src="assets/cheGuevara.png"
+              src="assets/jalaludinRumi.png"
               class="card-img-top"
               style="height: 320px"
               alt="Foto Team"
             />
             <div class="">
-              <p class="card-title" style="color: #303020">Che Guevara</p>
+              <p class="card-title pt-2" style="color: #303020">
+                jalaludin Rumi
+              </p>
               <p class="price card-text small text-secondary">Rp.100.000,00</p>
               <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
-              <button type="button" class="btn btn-warning">Pesan</button>
+              <button
+                type="button"
+                type="button"
+                class="btn btn-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalPesan"
+              >
+                Pesan
+              </button>
             </div>
           </div>
         </div>
@@ -88,16 +104,24 @@
         <div class="col gap-5">
           <div class="card" style="width: 250px; height: 450px">
             <img
-              src="assets/cheGuevara.png"
+              src="assets/plato.png"
               class="card-img-top"
               style="height: 320px"
               alt="Foto Team"
             />
             <div class="">
-              <p class="card-title" style="color: #303020">Che Guevara</p>
+              <p class="card-title pt-2" style="color: #303020">Plato</p>
               <p class="price card-text small text-secondary">Rp.100.000,00</p>
               <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
-              <button type="button" class="btn btn-warning">Pesan</button>
+              <button
+                type="button"
+                type="button"
+                class="btn btn-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalPesan"
+              >
+                Pesan
+              </button>
             </div>
           </div>
         </div>
@@ -107,100 +131,144 @@
     <!-- kolom kedua -->
 
     <div
-        class="row row-cols-2 row-cols-md-5 row-cols-md-5 g-3 my-3 mx-2 px-2 justify-content-center"
-      >
-        <!-- 1 -->
-        <div class="col gap-5">
-          <div class="card" style="width: 250px; height: 450px">
-            <img
-              src="assets/cheGuevara.png"
-              class="card-img-top"
-              style="height: 320px"
-              alt="Foto Team"
-            />
-            <div class="">
-              <p class="card-title" style="color: #303020">Che Guevara</p>
-              <p class="price card-text small text-secondary">Rp.100.000,00</p>
-              <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
-              <button type="button" class="btn btn-warning">Pesan</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="col gap-5">
-          <div class="card" style="width: 250px; height: 450px">
-            <img
-              src="assets/cheGuevara.png"
-              class="card-img-top"
-              style="height: 320px"
-              alt="Foto Team"
-            />
-            <div class="">
-              <p class="card-title" style="color: #303020">Che Guevara</p>
-              <p class="price card-text small text-secondary">Rp.100.000,00</p>
-              <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
-              <button type="button" class="btn btn-warning">Pesan</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="col gap-5">
-          <div class="card" style="width: 250px; height: 450px">
-            <img
-              src="assets/cheGuevara.png"
-              class="card-img-top"
-              style="height: 320px"
-              alt="Foto Team"
-            />
-            <div class="">
-              <p class="card-title" style="color: #303020">Che Guevara</p>
-              <p class="price card-text small text-secondary">Rp.100.000,00</p>
-              <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
-              <button type="button" class="btn btn-warning">Pesan</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="col gap-5">
-          <div class="card" style="width: 250px; height: 450px">
-            <img
-              src="assets/cheGuevara.png"
-              class="card-img-top"
-              style="height: 320px"
-              alt="Foto Team"
-            />
-            <div class="">
-              <p class="card-title" style="color: #303020">Che Guevara</p>
-              <p class="price card-text small text-secondary">Rp.100.000,00</p>
-              <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
-              <button type="button" class="btn btn-warning">Pesan</button>
-            </div>
+      class="row row-cols-2 row-cols-md-5 row-cols-md-5 g-3 my-3 mx-2 px-2 justify-content-center text-center"
+    >
+      <!-- 1 -->
+      <div class="col gap-5">
+        <div class="card" style="width: 250px; height: 450px">
+          <img
+            src="assets/robiatunAdawiyah.png"
+            class="card-img-top"
+            style="height: 320px"
+            alt="Foto Team"
+          />
+          <div class="">
+            <p class="card-title pt-2" style="color: #303020">
+              Robiatun Adawiyah
+            </p>
+            <p class="price card-text small text-secondary">Rp.100.000,00</p>
+            <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
+            <button
+              type="button"
+              type="button"
+              class="btn btn-warning"
+              data-bs-toggle="modal"
+              data-bs-target="#modalPesan"
+            >
+              Pesan
+            </button>
           </div>
         </div>
       </div>
+
+      <div class="col gap-5">
+        <div class="card" style="width: 250px; height: 450px">
+          <img
+            src="assets/Poster Toraja City.jpg"
+            class="card-img-top"
+            style="height: 320px"
+            alt="Foto Team"
+          />
+          <div class="">
+            <p class="card-title pt-2" style="color: #303020">Toraja City</p>
+            <p class="price card-text small text-secondary">Rp.100.000,00</p>
+            <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
+            <button
+              type="button"
+              type="button"
+              class="btn btn-warning"
+              data-bs-toggle="modal"
+              data-bs-target="#modalPesan"
+            >
+              Pesan
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col gap-5">
+        <div class="card" style="width: 250px; height: 450px">
+          <img
+            src="assets/tanmalaka.png"
+            class="card-img-top"
+            style="height: 320px"
+            alt="Foto Team"
+          />
+          <div class="">
+            <p class="card-title pt-2" style="color: #303020">Tan Malaka</p>
+            <p class="price card-text small text-secondary">Rp.100.000,00</p>
+            <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
+            <button
+              type="button"
+              type="button"
+              class="btn btn-warning"
+              data-bs-toggle="modal"
+              data-bs-target="#modalPesan"
+            >
+              Pesan
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col gap-5">
+        <div class="card" style="width: 250px; height: 450px">
+          <img
+            src="assets/tentangdaskapital.png"
+            class="card-img-top"
+            style="height: 320px"
+            alt="Foto Team"
+          />
+          <div class="">
+            <p class="card-title pt-2" style="color: #303020">Das Kapital</p>
+            <p class="price card-text small text-secondary">Rp.100.000,00</p>
+            <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
+            <button
+              type="button"
+              type="button"
+              class="btn btn-warning"
+              data-bs-toggle="modal"
+              data-bs-target="#modalPesan"
+            >
+              Pesan
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Catalog Produk Seminar -->
 
     <div class="text-center mb-5 pt-5">
       <h3 class="fw-bold mb-1 mt-5 mb-2">Seminar</h3>
 
-    <div
+      <div
         class="row row-cols-2 row-cols-md-5 row-cols-md-5 g-3 my-3 mx-2 px-2 justify-content-center"
       >
         <!-- 1 -->
         <div class="col gap-5">
           <div class="card" style="width: 250px; height: 450px">
             <img
-              src="assets/cheGuevara.png"
+              src="assets/seminar1.jpg"
               class="card-img-top"
               style="height: 320px"
               alt="Foto Team"
             />
             <div class="">
-              <p class="card-title" style="color: #303020">Che Guevara</p>
+              <p class="card-title pt-2" style="color: #303020">
+                FKSPTI Strategy
+              </p>
               <p class="price card-text small text-secondary">Rp.100.000,00</p>
               <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
-              <button type="button" class="btn btn-warning">Pesan</button>
+              <button
+                type="button"
+                class="btn btn-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalEvent"
+                style="margin: 10px"
+              >
+                Pesan
+              </button>
             </div>
           </div>
         </div>
@@ -208,16 +276,26 @@
         <div class="col gap-5">
           <div class="card" style="width: 250px; height: 450px">
             <img
-              src="assets/cheGuevara.png"
+              src="assets/seminar2.jpg"
               class="card-img-top"
               style="height: 320px"
               alt="Foto Team"
             />
             <div class="">
-              <p class="card-title" style="color: #303020">Che Guevara</p>
+              <p class="card-title pt-2" style="color: #303020">
+                FKSPTI Taktik
+              </p>
               <p class="price card-text small text-secondary">Rp.100.000,00</p>
               <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
-              <button type="button" class="btn btn-warning">Pesan</button>
+              <button
+                type="button"
+                class="btn btn-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalEvent"
+                style="margin: 10px"
+              >
+                Pesan
+              </button>
             </div>
           </div>
         </div>
@@ -225,16 +303,26 @@
         <div class="col gap-5">
           <div class="card" style="width: 250px; height: 450px">
             <img
-              src="assets/cheGuevara.png"
+              src="assets/seminar3.jpg"
               class="card-img-top"
               style="height: 320px"
               alt="Foto Team"
             />
             <div class="">
-              <p class="card-title" style="color: #303020">Che Guevara</p>
+              <p class="card-title pt-2" style="color: #303020">
+                Kewirausahaan
+              </p>
               <p class="price card-text small text-secondary">Rp.100.000,00</p>
               <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
-              <button type="button" class="btn btn-warning">Pesan</button>
+              <button
+                type="button"
+                class="btn btn-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalEvent"
+                style="margin: 10px"
+              >
+                Pesan
+              </button>
             </div>
           </div>
         </div>
@@ -242,16 +330,26 @@
         <div class="col gap-5">
           <div class="card" style="width: 250px; height: 450px">
             <img
-              src="assets/cheGuevara.png"
+              src="assets/seminar4.jpg"
               class="card-img-top"
               style="height: 320px"
               alt="Foto Team"
             />
             <div class="">
-              <p class="card-title" style="color: #303020">Che Guevara</p>
+              <p class="card-title pt-2" style="color: #303020">
+                Perang Pemikiran Dalam Ekonomi
+              </p>
               <p class="price card-text small text-secondary">Rp.100.000,00</p>
               <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
-              <button type="button" class="btn btn-warning">Pesan</button>
+              <button
+                type="button"
+                class="btn btn-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalEvent"
+                style="margin: 10px"
+              >
+                Pesan
+              </button>
             </div>
           </div>
         </div>
@@ -263,16 +361,26 @@
         <div class="col gap-5">
           <div class="card" style="width: 250px; height: 450px">
             <img
-              src="assets/cheGuevara.png"
+              src="assets/seminar5.jpg"
               class="card-img-top"
               style="height: 320px"
               alt="Foto Team"
             />
             <div class="">
-              <p class="card-title" style="color: #303020">Che Guevara</p>
+              <p class="card-title pt-2" style="color: #303020">
+                Perang Pemikiran Dalam Sosial Dan Politik
+              </p>
               <p class="price card-text small text-secondary">Rp.100.000,00</p>
               <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
-              <button type="button" class="btn btn-warning">Pesan</button>
+              <button
+                type="button"
+                class="btn btn-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalEvent"
+                style="margin: 10px"
+              >
+                Pesan
+              </button>
             </div>
           </div>
         </div>
@@ -280,16 +388,26 @@
         <div class="col gap-5">
           <div class="card" style="width: 250px; height: 450px">
             <img
-              src="assets/cheGuevara.png"
+              src="assets/seminar6.jpg"
               class="card-img-top"
               style="height: 320px"
               alt="Foto Team"
             />
             <div class="">
-              <p class="card-title" style="color: #303020">Che Guevara</p>
+              <p class="card-title pt-2" style="color: #303020">
+                Media Sosial Adalah Senjata Perang
+              </p>
               <p class="price card-text small text-secondary">Rp.100.000,00</p>
               <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
-              <button type="button" class="btn btn-warning">Pesan</button>
+              <button
+                type="button"
+                class="btn btn-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalEvent"
+                style="margin: 10px"
+              >
+                Pesan
+              </button>
             </div>
           </div>
         </div>
@@ -297,20 +415,176 @@
         <div class="col gap-5">
           <div class="card" style="width: 250px; height: 450px">
             <img
-              src="assets/cheGuevara.png"
+              src="assets/seminar7.jpg"
               class="card-img-top"
               style="height: 320px"
               alt="Foto Team"
             />
             <div class="">
-              <p class="card-title" style="color: #303020">Che Guevara</p>
+              <p class="card-title pt-2" style="color: #303020">
+                Sistem Informasi
+              </p>
               <p class="price card-text small text-secondary">Rp.100.000,00</p>
               <p style="color: rgb(88, 91, 91); font-size: smaller"></p>
-              <button type="button" class="btn btn-warning">Pesan</button>
+              <button
+                type="button"
+                class="btn btn-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalEvent"
+                style="margin: 10px"
+              >
+                Pesan
+              </button>
             </div>
           </div>
         </div>
+      </div>
+    </div>
 
+    <!-- Start Modal Buku-->
+    <div
+      class="modal fade"
+      id="modalPesan"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="exampleModalLabel">Pesanan</h2>
 
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <p>Tentukan Jumlah Pesanan</p>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                padding: 10px;
+                gap: 10px;
+              "
+            >
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                onclick="ubahJumlah(-1)"
+              >
+                -
+              </button>
+              <input
+                type="number"
+                id="jumlahPesanan"
+                class="form-control text-center"
+                value="1"
+                min="1"
+              />
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                onclick="ubahJumlah(1)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-warning">Pesan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Finish Modal Buku-->
+
+    <!-- Start Modal Event -->
+    <div
+      class="modal fade"
+      id="modalEvent"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="exampleModalLabel">Pesanan</h2>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div
+            class="modal-body"
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding: 10 px;
+            "
+          >
+            <label for="exampleDate" class="form-label">Pilih Tanggal</label>
+            <input type="date" class="form-control" id="exampleDate" />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-warning">Pesan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Finish Modal Event -->
+
+    <!-- Footer -->
+    <footer class="bg-body-tertiary">
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+        "
+      >
+        <p>
+          © 2026 Copyright: Hactive8 Batch 96 Ai Enhandched Full Stack Developer
+        </p>
+      </div>
+      <!-- Finish Footer -->
+    </footer>
+
+    <!-- script -->
+    <script src="component/navbar.js"></script>
+    <script src="component/addOn.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

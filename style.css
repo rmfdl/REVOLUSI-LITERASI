@@ -17,22 +17,12 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* --- BAGIAN KIRI --- */
-.navbar-left {
-  display: flex;
-  gap: 20px;
-  /* align-items: center !important;
-  justify-content: center !important; */
+/* Styling Logo */
+
+li:hover {
+  color: #e6b800;
 }
 
-/* Styling Logo */
-.logo1 {
-  border: 5px solid black;
-  text-decoration: none;
-  font-size: 24px;
-  align-items: center;
-  justify-content: center;
-}
 .text-black {
   color: #1a1a1a;
   font-family: "Permanent Marker", cursive;
@@ -77,10 +67,6 @@
 }
 
 /* Styling Search Bar */
-.search-box {
-  display: flex;
-  align-items: center;
-}
 .search-box input {
   padding: 8px 15px;
   border: 1px solid #ddd;
@@ -224,19 +210,19 @@
   width: 300px !important;
 }
 
-.card {
+/* .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 10px;
   text-align: center;
   font-family: arial;
-}
+} */
 
-.card img {
-  /* max-width: 230px; */
+/* .card img {
+  max-width: 230px;
   padding: 10px;
   width: 200px;
   height: 280px;
-}
+} */
 
 .promotionReading {
   display: flex;
@@ -325,14 +311,14 @@
 }
 
 .googleMap {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 15px 40px;
   width: auto;
-  margin-top: 12px;
+  margin-top: 12px; */
 }
 
 /* bagian About*/
