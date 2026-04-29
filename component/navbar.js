@@ -1,13 +1,13 @@
 let nav = `<nav class="navbar">
       <div class="navbar-left">
-        <a href="#" class="logo1">
+        <a href="/index.html" class="logo1">
           <span class="text-black">Revolusi</span
           ><span class="text-yellow">Literasi</span>
         </a>
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
+          <li><a href="/index.html">Home</a></li>
           <li><a href="#">Catalog</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="/about.html">About</a></li>
         </ul>
       </div>
 
