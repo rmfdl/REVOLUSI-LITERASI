@@ -6,7 +6,7 @@ let nav = `<nav class="navbar">
         </a>
         <ul class="nav-links">
           <li><a href="/index.html">Home</a></li>
-          <li><a href="#">Catalog</a></li>
+          <li><a href="/catalog.html">Catalog</a></li>
           <li><a href="/about.html">About</a></li>
         </ul>
       </div>
@@ -18,7 +18,7 @@ let nav = `<nav class="navbar">
         </div>
         <div class="action-links">
           <a href="#" class="btn-login">Login</a>
-          <a href="#" class="btn-order"
+          <a href="/cart.html" class="btn-order"
             ><i class="fa-solid fa-cart-arrow-down"></i
           ></a>
         </div>
