@@ -7,6 +7,7 @@
     <!-- Link CSS -->
     <link rel="stylesheet" href="style.css" />
 
+    <link rel="stylesheet" href="sweetalert2.min.css" />
     <!-- Link Bostrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -16,13 +17,39 @@
     />
   </head>
   <body>
+    <div class="container mt-5">
+      <div class="card">
+        <div class="card-header bg-dark text-white">
+          <h5 class="mb-0">Your Shopping Cart</h5>
+        </div>
+        <div id="cart-list" class="list-group list-group-flush"></div>
+      </div>
+    </div>
+    <div class="viewCart"></div>
+    <div
+      class="fixed-bottom d-flex justify-content-between"
+      style="margin: 1%; background-color: aliceblue; box-shadow: black"
+    >
+      <div>
+        <span>Total Belanja</span>
+      </div>
+      <div>
+        <span id="total">Rp. 0</span>
+        <button type="button" onclick="checkout()" class="btn btn-warning">
+          Checkout
+        </button>
+      </div>
+    </div>
     <!-- script -->
-    <script src="component/navbar.js"></script>
-    <script src="component/addOn.js"></script>
+    <script defer src="component/navbar.js"></script>
+    <script defer src="component/addOn.js"></script>
+    <script defer src="/component/cart.js"></script>
     <script
+      defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
