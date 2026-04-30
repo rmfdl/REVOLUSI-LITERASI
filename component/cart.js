@@ -62,7 +62,7 @@ function checkout() {
         localStorage.removeItem("orders");
         renderCart(allProduk);
         setTimeout(() => {
-          location.href = "/";
+          location.href = "index.html";
         }, 1000);
       });
   });
