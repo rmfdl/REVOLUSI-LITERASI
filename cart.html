@@ -27,15 +27,20 @@
     </div>
     <div class="viewCart"></div>
     <div
-      class="fixed-bottom d-flex justify-content-between"
-      style="margin: 1%; background-color: aliceblue; box-shadow: black"
+      class="fixed-bottom container-fluid bg-light d-flex justify-content-between p-3"
+      style="box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6)"
     >
-      <div>
-        <span>Total Belanja</span>
+      <div class="container d-flex gap-3 mt-3 justify-content-start">
+        <span style="font-weight: bold">Total Belanja :</span>
+        <span id="total" style="font-weight: bold">Rp. 0</span>
       </div>
-      <div>
-        <span id="total">Rp. 0</span>
-        <button type="button" onclick="checkout()" class="btn btn-warning">
+      <div class="container d-flex justify-content-end">
+        <button
+          type="button"
+          onclick="checkout()"
+          class="btn btn-warning"
+          style="width: 110px; height: 40px"
+        >
           Checkout
         </button>
       </div>
