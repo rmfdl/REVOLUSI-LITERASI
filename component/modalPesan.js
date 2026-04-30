@@ -73,7 +73,9 @@ function renderCard(books) {
     card.className = "card-item";
 
     card.innerHTML = `
-    <img src="assets/${book.image}" alt="${book.name}" width="200" height="300"/>
+    <div class="card" style="width: 18rem;"> 
+    <img src="assets/${book.image}" alt="${book.name}" class="card-img-top" style="width: 250px; height: 300px;"/>
+    <div class="card-body"> </div>
     <h5>${book.name}</h5>
     <p class="price">Rp. ${book.harga}</p>
     <p>${book.deskripsi}</p>
@@ -86,7 +88,8 @@ function renderCard(books) {
     onclick="createModal(${book.id})"
     >
     Pesan
-    </button>`;
+    </button>
+    </div>`;
 
     containerCard.appendChild(card);
 
