@@ -48,12 +48,7 @@ let nav = `<nav class="navbar navbar-expand-lg d-flex justify-content-between">
           </ul>
 
           <div class="container d-flex justify-content-end">
-            <div class="search-box d-flex">
-              <input type="text" placeholder="Cari disini..." />
-              <button type="submit">Search</button>
-            </div>
             <div class="action-links">
-              <a href="#" class="btn-login">Login</a>
               <a href="/cart.html" class="btn-order"
                 ><i class="fa-solid fa-cart-arrow-down"></i
               ></a>

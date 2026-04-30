@@ -106,69 +106,58 @@ const containerModal = document.getElementById("modalBeli");
 // ini render Modal
 function renderModal(data) {
   // console.log(data);
-  containerModal.innerHTML = "";
-  const card = document.createElement("div");
-  card.className = "card-item";
+  // containerModal.innerHTML = "";
+  // const card = document.createElement("div");
+  // card.className = "card-item";
 
-  card.innerHTML = `
-          <div class="modal-header">
-            <h2 class="modal-title fs-5" id="exampleModalLabel">Pesanan</h2>
+  // card.innerHTML = `
+  //         <div class="modal-header">
+  //           <h2 class="modal-title fs-5" id="exampleModalLabel">Pesanan</h2>
 
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
+  //           <button
+  //             type="button"
+  //             class="btn-close"
+  //             data-bs-dismiss="modal"
+  //             aria-label="Close"
+  //           ></button>
+  //         </div>
 
-          <div class="modal-body">
-            <p>Tentukan Jumlah Pesanan</p>
-            <div
-              style="
-                display: flex;
-                justify-content: center;
-                padding: 10px;
-                gap: 10px;
-              "
-            >
-              <button
-                class="btn btn-outline-secondary"
-                type="button"
-                onclick="ubahJumlah(-1)"
-              >
-                -
-              </button>
-              <input
-                type="number"
-                id="jumlahPesanan"
-                class="form-control text-center"
-                value="1"
-                min="1"
-              />
-              <button
-                class="btn btn-outline-secondary"
-                type="button"
-                onclick="ubahJumlah(1)"
-              >
-                +
-              </button>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close ${data.id}
-            </button>
-            <button type="button" onclick="addToCart(${data.id}, ${data.qty})" class="btn btn-warning">
-              Pesan
-            </button>
-          </div>`;
+  //         <div class="modal-body">
+  //           <p>Tentukan Jumlah Pesanan</p>
+  //           <div
+  //             style="
+  //               display: flex;
+  //               justify-content: center;
+  //               padding: 10px;
+  //               gap: 10px;
+  //             "
+  //           >
+  //             <input
+  //             disabled
+  //               type="number"
+  //               id="jumlahPesanan"
+  //               class="form-control text-center"
+  //               value="1"
+  //               min="1"
+  //             />
 
-  containerModal.appendChild(card);
+  //           </div>
+  //         </div>
+  //         <div class="modal-footer">
+  //           <button
+  //             type="button"
+  //             class="btn btn-secondary"
+  //             data-bs-dismiss="modal"
+  //           >
+  //             Close
+  //           </button>
+  //           <button type="button" onclick="" class="btn btn-warning">
+  //             Pesan
+  //           </button>
+  //         </div>`;
+
+  // containerModal.appendChild(card);
+  addToCart(data.id, data.qty);
 }
 
 function addToCart(data, qty) {
@@ -177,39 +166,68 @@ function addToCart(data, qty) {
   const getBook = listOfBooks.find((el) => el.id === data);
   const getproduct = product?.find((el) => el.id === data);
 
-  if (!product) {
-    // getListProduct()push(objek);
-    localStorage.setItem("orders", JSON.stringify([{ ...getBook, qty: qty }]));
-  } else {
-    if (getproduct) {
-      console.log(qty);
-      let newProduct = product.map((el) => {
-        if (el.id === data) {
-          el = {
-            ...el,
+  Swal.fire({
+    title: "Apakah Anda Yakin ingin membeli",
+    // text: "",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes",
+    cancelButtonText: "No",
+  })
+    .then((result) => {
+      if (result.isConfirmed)
+        Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 1000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          },
+        }).fire({
+          icon: "success",
+          title: "Produk berhasil ditambahkan",
+        });
+    })
+    .then(() => {
+      if (!product) {
+        localStorage.setItem(
+          "orders",
+          JSON.stringify([{ ...getBook, qty: qty }]),
+        );
+      } else {
+        if (getproduct) {
+          console.log(qty);
+          let newProduct = product.map((el) => {
+            if (el.id === data) {
+              el = {
+                ...el,
+                qty: qty,
+              };
+            }
+
+            return el;
+          });
+          localStorage.setItem("orders", JSON.stringify(newProduct));
+        } else {
+          let objek = {
+            ...getBook,
             qty: qty,
           };
+          let newProduct = product;
+          newProduct.push(objek);
+          localStorage.setItem("orders", JSON.stringify(newProduct));
         }
+      }
 
-        return el;
-      });
-      localStorage.setItem("orders", JSON.stringify(newProduct));
-      console.log(newProduct, "masuk");
-    } else {
-      let objek = {
-        ...getBook,
-        qty: qty,
-      };
-      let newProduct = product;
-      newProduct.push(objek);
-      localStorage.setItem("orders", JSON.stringify(newProduct));
-    }
-    // console.log(tempArr);
-    location.reload();
-    // console.log(objek.id);
-    // console.log(listOfBooks[data]);
-    // console.log(listproduct);
-  }
+      setTimeout(() => {
+        location.reload();
+      }, 500);
+    });
 }
 
 function createModal(data) {
@@ -231,14 +249,10 @@ function createModal(data) {
     };
     // localStorage.setItem("orders", JSON.stringify([objek]));
   }
-  console.log(getproduct);
 
   renderModal(objek);
 
   // console.log(objek);
 }
-// for (let i = 0; i < getListProduct()length; i++) {
-
-// }
 
 renderCard(listOfBooks);
