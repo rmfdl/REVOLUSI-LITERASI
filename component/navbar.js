@@ -2,7 +2,7 @@ let nav = `<nav class="navbar navbar-expand-lg d-flex justify-content-between">
       <!-- Kelas Kiri -->
       <div class="container d-flex justify-content-start">
         <a
-          href="/index.html"
+          href="index.html"
           class="border border-dark border-4 fs-4 text-decoration-none me-4"
         >
           <span class="text-black">Revolusi</span
@@ -23,7 +23,7 @@ let nav = `<nav class="navbar navbar-expand-lg d-flex justify-content-between">
           <ul class="list-inline gap-3 d-flex text-decoration-none mt-3">
             <li>
               <a
-                href="/index.html"
+                href="index.html"
                 class="list-group-item"
                 style="font-weight: bold"
                 >Home</a
@@ -31,7 +31,7 @@ let nav = `<nav class="navbar navbar-expand-lg d-flex justify-content-between">
             </li>
             <li>
               <a
-                href="/catalog.html"
+                href="catalog.html"
                 class="list-group-item"
                 style="font-weight: bold"
                 >Catalog</a
@@ -39,7 +39,7 @@ let nav = `<nav class="navbar navbar-expand-lg d-flex justify-content-between">
             </li>
             <li>
               <a
-                href="/about.html"
+                href="about.html"
                 class="list-group-item"
                 style="font-weight: bold"
                 >About</a
@@ -51,7 +51,7 @@ let nav = `<nav class="navbar navbar-expand-lg d-flex justify-content-between">
             
             <div class="action-links ">
              
-              <a href="/cart.html" class="btn-order"
+              <a href="cart.html" class="btn-order"
                 ><i class="fa-solid fa-cart-arrow-down"></i
               ></a>
             </div>
