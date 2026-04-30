@@ -9,7 +9,7 @@ let allProduk = getListProduct();
 let grandTotal = 0;
 
 function renderCart(product) {
-  console.log(product);
+  // console.log(product);
   //   let product = getListProduct();
   containerCart.innerHTML = "";
 
@@ -27,9 +27,12 @@ function renderCart(product) {
                         ${item.qty} x Rp ${item.harga.toLocaleString()}
                     </small>
                 </div>
-                <div class="text-end">
+                <div class="text-end d-flex flex-column justify-content-center align-items-end gap-2">
                     <span class="fw-bold">Rp ${subtotal.toLocaleString()}</span>
-                </div>
+                    <span onclick="deleteCart(${item.id})" class="btn btn-danger btn-sm">
+                      <i class="button-pointers fa-solid fa-trash" ></i>
+                    </span>
+                    </div>
             </div>`;
     containerCart.appendChild(cart);
   });
@@ -62,6 +65,50 @@ function checkout() {
           location.href = "/";
         }, 1000);
       });
+  });
+}
+
+function deleteCart(id) {
+  let product = getListProduct();
+
+  const getproduct = product?.filter((el) => {
+    if (el.id !== id) {
+      return el;
+    }
+  });
+
+  // console.log(getproduct);
+
+  Swal.fire({
+    title: "Apakah Anda Yakin ingin menghapus item",
+    // text: "",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes",
+    cancelButtonText: "No",
+  }).then((result) => {
+    if (result.isConfirmed)
+      Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 1000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
+      })
+        .fire({
+          icon: "success",
+          title: "Produk berhasil dihapus",
+        })
+        .then(() => {
+          localStorage.setItem("orders", JSON.stringify(getproduct));
+          location.reload();
+        });
   });
 }
 

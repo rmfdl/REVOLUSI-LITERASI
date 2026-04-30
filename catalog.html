@@ -18,15 +18,15 @@
   </head>
   <body>
     <!-- Start Catalog Produk Ebook-->
-
     <div class="text-center mb-5">
       <h3 class="fw-bold mb-1 mt-5 mb-2">E-book</h3>
 
       <div
+        id="container-card"
         class="row row-cols-2 row-cols-md-5 row-cols-md-5 g-3 my-3 mx-2 px-2 justify-content-center"
       >
         <!-- 1 -->
-        <div class="col gap-5">
+        <!-- <div class="col gap-5">
           <div class="card" style="width: 250px; height: 450px">
             <img
               src="assets/cheGuevara.png"
@@ -124,7 +124,7 @@
               </button>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -134,7 +134,7 @@
       class="row row-cols-2 row-cols-md-5 row-cols-md-5 g-3 my-3 mx-2 px-2 justify-content-center text-center"
     >
       <!-- 1 -->
-      <div class="col gap-5">
+      <!-- <div class="col gap-5">
         <div class="card" style="width: 250px; height: 450px">
           <img
             src="assets/robiatunAdawiyah.png"
@@ -234,7 +234,7 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <!-- Catalog Produk Seminar -->
@@ -246,7 +246,7 @@
         class="row row-cols-2 row-cols-md-5 row-cols-md-5 g-3 my-3 mx-2 px-2 justify-content-center"
       >
         <!-- 1 -->
-        <div class="col gap-5">
+        <!-- <div class="col gap-5">
           <div class="card" style="width: 250px; height: 450px">
             <img
               src="assets/seminar1.jpg"
@@ -352,13 +352,13 @@
               </button>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
       <div
         class="row row-cols-2 row-cols-md-5 row-cols-md-5 g-3 my-3 mx-2 px-2 justify-content-center"
       >
         <!-- 1 -->
-        <div class="col gap-5">
+        <!-- <div class="col gap-5">
           <div class="card" style="width: 250px; height: 450px">
             <img
               src="assets/seminar5.jpg"
@@ -437,7 +437,7 @@
               </button>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -450,7 +450,9 @@
       aria-hidden="true"
     >
       <div class="modal-dialog">
-        <div class="modal-content">
+        <div id="modalBeli" class="modal-content"></div>
+      </div>
+      <!-- <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title fs-5" id="exampleModalLabel">Pesanan</h2>
 
@@ -505,14 +507,14 @@
             </button>
             <button type="button" class="btn btn-warning">Pesan</button>
           </div>
-        </div>
-      </div>
+        
+      </div> -->
     </div>
 
     <!-- Finish Modal Buku-->
 
     <!-- Start Modal Event -->
-    <div
+    <!-- <div
       class="modal fade"
       id="modalEvent"
       tabindex="-1"
@@ -556,7 +558,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Finish Modal Event -->
 
@@ -580,12 +582,13 @@
 
     <!-- script -->
     <script src="component/navbar.js"></script>
+    <script src="component/modalPesan.js"></script>
     <script src="component/addOn.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <script src="component/modalPesan.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
